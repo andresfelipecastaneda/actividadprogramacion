@@ -11,7 +11,7 @@ A continuacion esta es la estructura de los archivos:
 actividadprogramacion/model/ administrativo.py - asignatura.py - docente.py - estudiante.py - persona.py - programa.py
 actividadprogramacion/main.py
 
-Para ejecutar el programa se debe copiar el enlace de GitHub, pegar en el navegador y descargarlo, luego abrir la carpeta del proyecto. Despues ejecutar el programa en la terminal "py main.py" y por
+Para ejecutar el programa se debe copiar el enlace de GitHub "https://github.com/andresfelipecastaneda/actividadprogramacion.git", pegar en el navegador y descargarlo, luego abrir la carpeta del proyecto. Despues ejecutar el programa en la terminal "py main.py" y por
 ultimo revisar la salida de la consola donde se van a mostrar toda la información.
 
 En este proyecto se aplican tres conceptos básicos de la programación orientada a objetos como la herencia, sobreescritura y polimorfismo. La herencia se usa porque 
