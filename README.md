@@ -19,3 +19,5 @@ la clase Persona es la base y de ella se derivan Estudiante, Docente y Administr
 La sobreescritura aparece cuando estas clases hijas redefinen métodos como mostrar_informacion y realizar_actividad_principal, adaptándolos a lo que cada tipo de 
 persona necesita mostrar. Finalmente, el polimorfismo se ve cuando se recorre una lista con diferentes tipos de personas y se llaman los mismos métodos; aunque el 
 nombre del método es igual, cada objeto responde de manera distinta según su clase, mostrando comportamientos diferentes bajo una misma instrucción.
+
+Además, durante el desarrollo se hizo uso de la inteligencia artificial como apoyo para revisar errores en el código y comprender mejor los conceptos de programación orientada a objetos, lo que permitió mejorar la calidad del proyecto y afianzar el aprendizaje.
