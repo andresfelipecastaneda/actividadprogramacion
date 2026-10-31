@@ -42,6 +42,9 @@ class Asignatura:
     def set_programa(self, programa):
         if programa is not None:
             self._programa = programa
+            # ---------------- NUEVA PARTE ----------------
+            # Se agrega la asignatura automáticamente al programa
+            programa.agregar_asignatura(self)
         else:
             raise ValueError("La asignatura debe pertenecer a un programa")
 
@@ -64,3 +67,19 @@ class Asignatura:
         return (f"Asignatura {self._codigo}: {self._nombre}, Créditos: {self._num_creditos}, "
                 f"Programa: {self._programa.get_nombre()}, Semestre de oferta: {self._semestre_oferta}, "
                 f"Tipo: {self._tipo_asignatura}")
+
+    # Este metodo permite cambiar el tipo de asignatura y que el nuevo tipo este dentro de las opciones permitidas, si la asginatura es obligatoria o electiva
+    def cambiar_tipo(self, nuevo_tipo):
+        """Permite cambiar el tipo de asignatura (Obligatoria/Electiva)"""
+        if nuevo_tipo in ["Obligatoria", "Electiva"]:
+            self._tipo_asignatura = nuevo_tipo
+        else:
+            raise ValueError("El tipo de asignatura debe ser Obligatoria o Electiva")
+
+   # Este metodo permite actualizar el numero de creditos de la asignatura donde este valida que los creditos sean mayores que 0
+    def actualizar_creditos(self, nuevos_creditos):
+        """Permite actualizar el número de créditos"""
+        if nuevos_creditos > 0:
+            self._num_creditos = nuevos_creditos
+        else:
+            raise ValueError("El número de créditos debe ser mayor que 0")

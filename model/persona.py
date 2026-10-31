@@ -1,6 +1,9 @@
-# Se crea la clase que representa a las personas de la universidad
+# Se importa para convertir la clase en abstracta
 
-class Persona:
+from abc import ABC, abstractmethod 
+
+# Se crea la clase que representa a las personas de la universidad
+class Persona(ABC):
     # Este es el constructor que inicializa los atributos de la persona
     def __init__(self, identificacion, nombre, correo, telefono, direccion):
         # Aqui se usan los setters para validar los datos antes de asignarlos
@@ -55,3 +58,9 @@ class Persona:
     # Este es el metodo que muestra la informacion de Persona
     def mostrar_informacion(self):
         return f"Identificación: {self._identificacion}, Nombre: {self._nombre}, Correo: {self._correo}, Teléfono: {self._telefono}, Dirección: {self._direccion}"
+
+    # ---------------- NUEVA PARTE ----------------
+    # Método abstracto: cada clase hija debe implementarlo
+    @abstractmethod
+    def realizar_actividad_principal(self):
+        pass

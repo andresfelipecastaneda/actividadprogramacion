@@ -8,6 +8,7 @@ class ProgramaAcademico:
         self.set_facultad(facultad)
         self.set_num_semestres(num_semestres)
         self.set_modalidad(modalidad) 
+        self._asignaturas = [] 
 
     # Estos son los metodos que sirven para modificar los atributos con validaciones
     def get_codigo(self): return self._codigo
@@ -54,3 +55,23 @@ class ProgramaAcademico:
 # Este es el metodo que muestra la informacion del programa
     def mostrar_informacion(self):
         return f"Programa {self._codigo}: {self._nombre}, Facultad: {self._facultad}, Semestres: {self._num_semestres}, Modalidad: {self._modalidad}"
+
+    # ---------------- NUEVA PARTE ----------------
+    # Este metodo permite asociar una asignatura al programa academico donde el programa mantiene una lista interna de asignaturas
+    def agregar_asignatura(self, asignatura):
+        """Agrega una asignatura al programa académico"""
+        self._asignaturas.append(asignatura)
+
+    # Este metodo permite buscar una asignatura por codigo, si la encuentra la retorna, de lo contrario devuelve None.
+    def buscar_asignatura(self, codigo):
+        """Busca una asignatura por código"""
+        for asignatura in self._asignaturas:
+            if asignatura.get_codigo() == codigo:
+                return asignatura
+        # Si no se encuentra, se devuelve None (en main.py se lanza la excepción)
+        return None
+
+    # El metodo devuelve la lista completa de asignaturas asociadas al programa academico
+    def get_asignaturas(self):
+        """Devuelve la lista de asignaturas del programa"""
+        return self._asignaturas
