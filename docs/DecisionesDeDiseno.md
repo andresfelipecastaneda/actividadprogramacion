@@ -1,10 +1,5 @@
 # Documento de Decisiones de Diseño – Sistema de Gestión Académica
 
-## 1. Introducción
-Este documento describe las principales decisiones de diseño tomadas en el desarrollo del sistema académico. Se incluyen las alternativas consideradas, las opciones elegidas y la justificación de cada decisión, relacionándolas con los requerimientos de la actividad.
-
----
-
 ## 2. Tabla de Decisiones de Diseño
 
 | Decisión de diseño | Alternativas descartadas | Opción elegida | Justificación detallada |
@@ -16,8 +11,3 @@ Este documento describe las principales decisiones de diseño tomadas en el desa
 | **Horarios** | Representar horarios como cadenas de texto | Crear clase `Horario` con atributos y métodos | Se descartó el texto plano porque no permite validaciones ni flexibilidad. Con la clase `Horario` se asegura integridad: las horas deben ser válidas y el salón puede cambiarse sin romper el sistema. |
 | **Manejo de errores** | Usar solo excepciones genéricas de Python | Definir excepciones personalizadas (`GrupoLlenoError`, `EstudianteYaMatriculadoError`, `EstudianteNoEncontradoError`, etc.) | Se descartó el uso exclusivo de excepciones genéricas porque no permiten identificar claramente el tipo de error. Con excepciones personalizadas se mejora la claridad y se manejan errores específicos de las reglas académicas. |
 | **Validaciones de datos** | Permitir valores vacíos o inválidos | Implementar setters y validaciones en atributos | Se descartó permitir valores inválidos porque afectaría la integridad del sistema. Con validaciones se asegura consistencia: créditos > 0, tipo de asignatura válido, semestre de oferta mayor que 0. |
-
----
-
-## 3. Conclusión
-Las decisiones de diseño tomadas garantizan que el sistema sea robusto, extensible y fiel a la realidad académica. Se aplicaron principios de POO como herencia, polimorfismo, composición y manejo de excepciones personalizadas. Además, se añadieron validaciones para asegurar integridad de datos y métodos adicionales en la segunda versión para reflejar la evolución del sistema.
