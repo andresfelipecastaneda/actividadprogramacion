@@ -1,0 +1,43 @@
+# Sistema de Gestión Académica – Segunda Versión
+
+## Introducción
+La segunda versión del sistema de gestión académica en Python surge como una evolución de la primera entrega, en la cual se establecieron las bases de la programación orientada a objetos aplicadas al contexto académico. En esta nueva etapa se buscó ampliar la funcionalidad, fortalecer la estructura de las clases, mejorar las validaciones y establecer un manejo más claro de los errores.  
+Durante el desarrollo se utilizó la inteligencia artificial como apoyo pedagógico, lo que permitió comprender mejor los conceptos de herencia, polimorfismo, composición y validaciones, y justificar las decisiones de diseño de manera más sólida.
+
+
+## Cambios respecto a la primera versión
+En comparación con la primera versión, esta segunda entrega presenta modificaciones significativas. El archivo `main.py` fue actualizado para incluir pruebas más completas de inscripción y retiro de estudiantes, simulando escenarios reales de matrícula. Se incorporaron nuevas clases como `GrupoAcademico` y `Horario`, que aportan mayor realismo al modelado académico. También se implementaron excepciones personalizadas (`GrupoLlenoError`, `EstudianteYaMatriculadoError`, etc.), que brindan un control más preciso sobre los errores y mejoran la claridad del código.  
+
+Las clases existentes (`Estudiante`, `Docente`, `Asignatura`, `Administrativo`) fueron modificadas para incluir atributos y métodos más específicos, diferenciando de manera más clara los roles dentro del sistema. Finalmente, se añadieron validaciones y un control más estricto de la matrícula, garantizando la consistencia de los datos y evitando situaciones que pudieran comprometer la integridad del sistema.
+
+
+## Estructura de archivos
+La organización del proyecto en esta segunda versión es la siguiente:
+
+actividadprogramacion/
+│
+├── README.md                   # Documentación principal (segunda versión)
+├── README.md                   # Documentación de la primera versión
+├── DecisionesDeDiseno.md       # Documento con las decisiones de diseño
+│
+├── main.py                     # Archivo principal de ejecución del sistema
+│
+├── model/                      # Carpeta que contiene las clases del modelo
+│   ├── Persona.py              # Clase base abstracta Persona
+│   ├── Estudiante.py           # Clase Estudiante (hereda de Persona)
+│   ├── Docente.py              # Clase Docente (hereda de Persona)
+│   ├── Administrativo.py       # Clase Administrativo (hereda de Persona)
+│   ├── ProgramaAcademico.py    # Clase Programa Académico
+│   ├── Asignatura.py           # Clase Asignatura
+│   ├── GrupoAcademico.py       # Clase Grupo Académico
+│   ├── Horario.py              # Clase Horario
+│   └── Excepciones.py          # Excepciones personalizadas (manejo de errores)
+
+Esta estructurafacilita la comprensión de cómo se relacionan las clases entre sí.
+
+## Decisiones de diseño
+Las decisiones de diseño se encuentran documentadas en [`DecisionesDeDiseno.md`](./DecisionesDeDiseno.md). Allí se explican las alternativas descartadas, las opciones elegidas y la justificación detallada de cada decisión.  
+Se resalta que la inteligencia artificial fue utilizada como apoyo pedagógico y revision de errores, ayudando a reforzar la comprensión de herencia, polimorfismo, composición y validaciones.
+
+## Ejecución del sistema
+Para ejecutar el sistema, basta con abrir la terminal en la carpeta raíz del proyecto y ejecutar: python main.py
